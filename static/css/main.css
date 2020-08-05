@@ -1,0 +1,7 @@
+.nav-badge .badge {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-85%);
+  line-height: 1.4;
+  margin-left: 10px;
+}

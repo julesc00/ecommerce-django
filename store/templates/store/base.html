@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>E-commerce</title>
+</head>
+<body>
+
+
+<nav class="blue-grey darken-4 dark">
+        <div class="nav-wrapper">
+          <a href="{% url 'store' %}" class="brand-logo white-text">Ecommerce</a>
+            <ul class="hide-on-med-and-down right">
+                <li><a href="{% url 'store' %}" class="white-text">Store</a></li>
+                <li>
+                   <div class="center row">
+                      <div class="col s12 " >
+                        <div class="row" id="topbarsearch">
+                          <div class="input-field col s6 s12 red-text">
+                              <a href="" class="button-outline">Login</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </li>
+                <li>
+                    <a href="{% url 'cart' %}">
+                        <i class="material-icons">shop</i>
+                        <span class="nav-badge">
+                            <span class="badge nav-badge red-text">1</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+
+<div class="container">
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
