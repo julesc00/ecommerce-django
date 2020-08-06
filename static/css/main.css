@@ -1,7 +1,59 @@
+body {
+  background: lightgray;
+}
+
+.nav-wrapper {
+
+}
 .nav-badge .badge {
   position: absolute;
   top: 50%;
   transform: translate(0,-85%);
   line-height: 1.4;
   margin-left: 10px;
+  margin-right: 5px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  -webkit-box-shadow: -1px -3px 5px -2px;
+  -moz-box-shadow: -1px -3px 5px 2px;
+  box-shadow: -1px -3px 5px -2px; rgba()
+}
+
+.mini {
+  width: auto;
+  height: 50px;
+}
+
+.box-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.box-item {
+  margin: 0;
+}
+.price {
+  margin: 0;
+  padding: 0;
+}
+.box-element {
+  box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  border-radius: 0 0 4px 4px;
+}
+.table {
+
 }

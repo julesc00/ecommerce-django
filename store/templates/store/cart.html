@@ -3,6 +3,56 @@
 
 {% block content %}
 
-    <h3>Cart</h3>
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <a class="btn-flat waves-effect waves-teal " href="{% url 'store' %}"><i class="material-icons left">chevron_left</i>Continue Shopping</a>
+                <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h6>Items: <strong>3</strong></h6></th>
+                            <th><h6>Total: <strong>$42</strong></h6></th>
+                            <th>
+                                <a href="" class="btn wave-effect wave-light">
+                                    Checkout
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <table class="table responsive-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td><img class="mini" src="{% static 'images/placeholder.png' %}" alt=""></td>
+                            <td>Product 1</td>
+                            <td>$20</td>
+                            <td>2</td>
+                            <td>$32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
