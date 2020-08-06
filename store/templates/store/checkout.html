@@ -3,6 +3,94 @@
 
 {% block content %}
 
-    <h3>Checkout</h3>
+    <div class="row">
+
+        <!-- Left Form -->
+        <div class="col s6">
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div id="user-info" class="row">
+                                
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" class="validate">
+                                    <label for="icon_prefix">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="icon_telephone" type="tel" class="validate">
+                                    <label for="icon_telephone">Telephone</label>
+                                </div>
+                                
+                            </div>
+                            <hr class="hr-style-one">
+                                <div>
+                                    <h6>Shipping Info: </h6>
+                                </div>
+                            <hr class="hr-style-one">
+                            <div id="shipping-info" class="row">
+
+                                <div class="input-field col s6">
+                                    <input id="icon_prefix" placeholder="Address..." type="text" class="validate">
+                                    <label for="icon_prefix"></label>
+
+                                    <input id="icon_prefix" placeholder="State..." type="text" class="validate">
+                                    <label for="icon_prefix"></label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <input id="icon_prefix" placeholder="City..." type="text" class="validate">
+                                    <label for="icon_prefix"></label>
+
+                                    <input id="icon_prefix" placeholder="Zip Code..." type="text" class="validate">
+                                    <label for="icon_prefix"></label>
+                                </div>
+                            </div>
+                            <hr class="hr-style-two">
+                            <input
+                                    id="form-button"
+                                    style="width: 100%"
+                                    type="submit"
+                                    class="btn waves-effect waves-light white-text"
+                                    value="Continue"
+                            >
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="col s6">
+            <div class="card">
+                <div class="card-content">
+                    <a
+                            class="btn-flat waves-effect waves-teal "
+                            href="{% url 'cart' %}"
+                    >
+                        <i class="material-icons left">
+                            chevron_left</i>Back to Cart</a>
+                    <hr class="hr-style-one">
+                    <h5>Order Summary</h5>
+                    <hr class="hr-style-one">
+                    <div class="summary-detail">
+                        <div style="flex:2;">
+                            <img class="mini" src="{% static 'images/placeholder.png' %}" alt="">
+                        </div>
+                        <div style="flex:1;">Product 1</div>
+                        <div style="flex:1;">$20</div>
+                        <div style="flex:1;">x2</div>
+                    </div>
+                    <hr class="hr-style-one">
+                    <h6 style="font-weight: bold">Items: </h6>
+                    <h6 style="font-weight: bold">Total: $</h6>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
