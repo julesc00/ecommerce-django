@@ -9,11 +9,11 @@
             <div class="card-content">
                 <a class="btn-flat waves-effect waves-teal " href="{% url 'store' %}"><i class="material-icons left">chevron_left</i>Continue Shopping</a>
                 <hr>
-                <table>
+                <table class="table-checkout">
                     <thead>
                         <tr>
-                            <th><h6>Items: <strong>3</strong></h6></th>
-                            <th><h6>Total: <strong>$42</strong></h6></th>
+                            <th><h6>Items: <span style="font-weight: bold">6</span></h6></th>
+                            <th><h6>Total: <span style="font-weight: bold">$42</span></h6></th>
                             <th>
                                 <a href="" class="btn wave-effect wave-light">
                                     Checkout
@@ -28,29 +28,28 @@
 
     <div class="col s12">
         <div class="card">
-            <div class="card-content">
-                <table class="table responsive-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Item</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                        <tr>
-                            <td><img class="mini" src="{% static 'images/placeholder.png' %}" alt=""></td>
-                            <td>Product 1</td>
-                            <td>$20</td>
-                            <td>2</td>
-                            <td>$32</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="card-content cart-row">
+                <div style="flex:2"></div>
+                <div style="flex:2; font-weight: bold">Item</div>
+                <div style="flex:1; font-weight: bold">Price</div>
+                <div style="flex:1; font-weight: bold">Quantity</div>
+                <div style="flex:1; font-weight: bold">Total</div>
             </div>
+
+            <div class="card-content cart-row row-2">
+                <div style="flex:2"><img class="mini" src="{% static 'images/placeholder.png' %}" alt=""></div>
+                <div style="flex:2"><p>Product 1</p></div>
+                <div style="flex:1"><p>$20</p></div>
+                <div style="flex:1">
+                    <p id="qty-p" class="quantity">2</p>
+                    <div class="quantity">
+                        <img src="{% static 'images/arrow-up.png' %}" alt="" class="chg-quantity">
+                        <img src="{% static 'images/arrow-down.png' %}" alt="" class="chg-quantity">
+                    </div>
+                </div>
+                <div style="flex:1"><p>$32</p></div>
+            </div>
+
         </div>
     </div>
 </div>
