@@ -3,58 +3,28 @@
 
 {% block content %}
 
-    <div class="row">
+    <div class="row row-item">
+        {% for product in products %}
         <div class="col s4">
-            <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+            
+            <img class="thumbnail" src="{{ product.imageURL }}" alt="">
             <div class="box-element product">
                 <div class="box-detail">
-                    <div class="box-item"><h6><strong>Product</strong></h6></div>
-                    <div class="box-item"><h4 class="price"><strong>$20</strong></h4></div>
+                    <div class="box-item"><h6>{{ product.name }}</h6></div>
+                    <div class="box-item"><h5 class="price">${{ product.price|floatformat:2 }}</h5></div>
                 </div>
 
-                <hr>
+                <hr class="hr-style-one">
                 <div class="buttons">
                     <button class="btn waves-effect waves-light btn-small">Add to Cart</button>
                     <a href="" class="btn waves-effect waves-light btn-small pink darken-4">View</a>
                 </div>
 
             </div>
+
         </div>
 
-        <div class="col s4">
-            <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="" class="thumbnail">
-            <div class="box-element product">
-                <div class="box-detail">
-                    <div class="box-item"><h6><strong>Product</strong></h6></div>
-                    <div class="box-item"><h4 class="price"><strong>$20</strong></h4></div>
-                </div>
-
-                <hr>
-                <div class="buttons">
-                    <button class="btn waves-effect waves-light btn-small">Add to Cart</button>
-                    <a href="" class="btn waves-effect waves-light btn-small pink darken-4">View</a>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="col s4">
-            <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="" class="thumbnail">
-            <div class="box-element product">
-                <div class="box-detail">
-                    <div class="box-item"><h6><strong>Product</strong></h6></div>
-                    <div class="box-item"><h4 class="price"><strong>$20</strong></h4></div>
-                </div>
-
-                <hr>
-                <div class="buttons">
-                    <button class="btn waves-effect waves-light btn-small">Add to Cart</button>
-                    <a href="" class="btn waves-effect waves-light btn-small pink darken-4">View</a>
-                </div>
-
-
-            </div>
-        </div>
+    {% endfor %}
 
     </div>
 

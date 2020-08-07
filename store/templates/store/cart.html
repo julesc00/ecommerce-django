@@ -7,15 +7,25 @@
     <div class="col s12">
         <div class="card">
             <div class="card-content">
-                <a class="btn-flat waves-effect waves-teal " href="{% url 'store' %}"><i class="material-icons left">chevron_left</i>Continue Shopping</a>
-                <hr>
+                <a
+                        class="btn-flat waves-effect waves-teal "
+                        href="{% url 'store' %}"
+                >
+                    <i class="material-icons left">chevron_left</i>
+                    Continue Shopping
+                </a>
+                <hr class="hr-style-one">
                 <table class="table-checkout">
                     <thead>
                         <tr>
-                            <th><h6>Items: <span style="font-weight: bold">6</span></h6></th>
-                            <th><h6>Total: <span style="font-weight: bold">$42</span></h6></th>
+                            <th><h6>Items: <span style="font-weight: bold">{{ order.get_cart_items }}</span></h6></th>
+                            <th><h6>Total: <span style="font-weight: bold">
+                                {% load l10n %}
+                                ${{ order.get_cart_total|localize }}
+
+                            </span></h6></th>
                             <th>
-                                <a href="" class="btn wave-effect wave-light">
+                                <a href="{% url 'checkout' %}" class="btn wave-effect wave-light">
                                     Checkout
                                 </a>
                             </th>
@@ -36,20 +46,21 @@
                 <div style="flex:1; font-weight: bold">Total</div>
             </div>
 
+            {% for item in items %}
             <div class="card-content cart-row row-2">
-                <div style="flex:2"><img class="mini" src="{% static 'images/placeholder.png' %}" alt=""></div>
-                <div style="flex:2"><p>Product 1</p></div>
-                <div style="flex:1"><p>$20</p></div>
+                <div style="flex:2"><img class="mini" src="{{ item.product.imageURL }}" alt=""></div>
+                <div style="flex:2"><p>{{ item.product.name }}</p></div>
+                <div style="flex:1"><p>${{ item.product.price|floatformat:2 }}</p></div>
                 <div style="flex:1">
-                    <p id="qty-p" class="quantity">2</p>
+                    <p id="qty-p" class="quantity">{{ item.quantity }}</p>
                     <div class="quantity">
                         <img src="{% static 'images/arrow-up.png' %}" alt="" class="chg-quantity">
                         <img src="{% static 'images/arrow-down.png' %}" alt="" class="chg-quantity">
                     </div>
                 </div>
-                <div style="flex:1"><p>$32</p></div>
+                <div style="flex:1"><p>${{ item.get_total|floatformat:2 }}</p></div>
             </div>
-
+            {% endfor %}
         </div>
     </div>
 </div>

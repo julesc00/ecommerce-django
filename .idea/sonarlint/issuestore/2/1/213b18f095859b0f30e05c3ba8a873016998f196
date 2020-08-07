@@ -1,13 +1,6 @@
 
-JWeb:BoldAndItalicTagsCheck
-"Replace this <i> tag by <em>.(ÉÍÛ¸8å‡îŠ¼.
-OWeb:TableWithoutCaptionCheck" Add a description to this table.(“ş€8ÍªÛ‹¼.
-n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(œøù¤8¾å´Œ¼.
-s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(¡¤…’ùÿÿÿÿ8¾å´Œ¼.
-s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(™À§ãÿÿÿÿÿ8¾å´Œ¼.
-TWeb:TableWithoutCaptionCheck " Add a description to this table.(ú³ Éÿÿÿÿÿ8¾å´Œ¼.
-n Web:TableHeaderHasIdOrScopeCheck#";Add either an 'id' or a 'scope' attribute to this <th> tag.(É“š¼8¾å´Œ¼.
-s Web:TableHeaderHasIdOrScopeCheck$";Add either an 'id' or a 'scope' attribute to this <th> tag.(æ¾ä¡øÿÿÿÿ8¾å´Œ¼.
-n Web:TableHeaderHasIdOrScopeCheck%";Add either an 'id' or a 'scope' attribute to this <th> tag.(à”÷8¾å´Œ¼.
-s Web:TableHeaderHasIdOrScopeCheck&";Add either an 'id' or a 'scope' attribute to this <th> tag.(„âÆ˜ıÿÿÿÿ8¾å´Œ¼.
-s Web:TableHeaderHasIdOrScopeCheck'";Add either an 'id' or a 'scope' attribute to this <th> tag.(Á¾áÆûÿÿÿÿ8¾å´Œ¼.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ëÃ‰šıÿÿÿÿ8¾å´Œ¼.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(™À§ãÿÿÿÿÿ8¾å´Œ¼.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(êÆé“ùÿÿÿÿ8¾å´Œ¼.
+JWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(–êÊº8å‡îŠ¼.
+OWeb:TableWithoutCaptionCheck" Add a description to this table.(“ş€8ÍªÛ‹¼.

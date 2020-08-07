@@ -77,17 +77,21 @@
                     <hr class="hr-style-one">
                     <h5>Order Summary</h5>
                     <hr class="hr-style-one">
+                    {% for item in items %}
                     <div class="summary-detail">
                         <div style="flex:2;">
-                            <img class="mini" src="{% static 'images/placeholder.png' %}" alt="">
+                            <img class="mini" src="{{ item.product.imageURL }}" alt="">
                         </div>
-                        <div style="flex:1;">Product 1</div>
-                        <div style="flex:1;">$20</div>
-                        <div style="flex:1;">x2</div>
+                        <div style="flex:1;">{{ item.product.name }}</div>
+                        <div style="flex:1;">${{ item.product.price|floatformat:2 }}</div>
+                        <div style="flex:1;">x{{ item.quantity }}</div>
                     </div>
+                    {% endfor %}
                     <hr class="hr-style-one">
-                    <h6 style="font-weight: bold">Items: </h6>
-                    <h6 style="font-weight: bold">Total: $</h6>
+                    <h6 style="font-weight: bold">Items: {{ order.get_cart_items }}</h6>
+                    <h6 style="font-weight: bold">
+                        {% load l10n %}
+                        Total: ${{ order.get_cart_total|localize }}</h6>
                 </div>
             </div>
         </div>
